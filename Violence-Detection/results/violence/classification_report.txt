@@ -1,0 +1,13 @@
+VIOLENCE CLASSIFICATION REPORT
+============================================================
+
+              precision    recall  f1-score   support
+
+not_violence     0.6601    0.7623    0.7075       265
+    violence     0.6753    0.5574    0.6107       235
+
+    accuracy                         0.6660       500
+   macro avg     0.6677    0.6599    0.6591       500
+weighted avg     0.6672    0.6660    0.6620       500
+
+Accuracy: 0.6660

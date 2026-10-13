@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+.env/
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and temporary outputs
+logs/
+*.log
+tmp_trainer/
+wandb/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Downloaded datasets and archives (ignored by default)
+data/
+*.zip
+
+# Trained models: ignore by default
+models/
+checkpoints/
+checkpoints_v2/
+checkpoints-v3/
+checkpoint-*/
+*.safetensors
+*.pt
+*.pth
+*.bin
+
+# Allow the final model directory
+!models/
+!models/final/
+
+# Allow files required to load a Hugging Face model
+!models/final/config.json
+!models/final/model.safetensors
+!models/final/pytorch_model.bin
+!models/final/tokenizer.json
+!models/final/tokenizer_config.json
+!models/final/special_tokens_map.json
+!models/final/vocab.txt
+!models/final/added_tokens.json
+
+# Allow selected reproducibility artifacts
+!artifacts/
+artifacts/*
+!artifacts/test_predictions.csv
+!artifacts/metrics.json
+!artifacts/training_log.txt
+
+# Keep datasets and generated results private by default
+results/**/test_predictions.csv
+# Publish only the final model and selected evaluation artifacts
+models/*
+!models/final/
+!models/evaluation-v3/
+models/evaluation-v3/*
+!models/evaluation-v3/best_thresholds.npy
+!models/evaluation-v3/results.npz
+
+data/train.csv

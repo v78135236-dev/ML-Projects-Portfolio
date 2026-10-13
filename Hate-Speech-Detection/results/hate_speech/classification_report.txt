@@ -1,0 +1,9 @@
+                    precision    recall  f1-score   support
+
+       hate_speech     0.4583    0.3793    0.4151        58
+offensive_language     0.9413    0.9522    0.9467       774
+           neither     0.9112    0.9167    0.9139       168
+
+          accuracy                         0.9130      1000
+         macro avg     0.7703    0.7494    0.7586      1000
+      weighted avg     0.9082    0.9130    0.9104      1000

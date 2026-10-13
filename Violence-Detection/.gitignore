@@ -1,0 +1,40 @@
+﻿# Python cache and temporary files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Ignore model directories except the final trained model
+models/*
+!models/violence_bert/
+
+# Exclude training checkpoints and checkpoint artifacts
+models/violence_bert/checkpoint-*/
+models/violence_bert/**/checkpoint-*/
+checkpoints/
+checkpoint-*/
+tmp_trainer/
+wandb/
+
+# Ignore model weights globally, then allow final model artifacts
+*.safetensors
+!models/violence_bert/*.safetensors
+
+*.pt
+*.pth
+*.bin
+!models/violence_bert/*.bin
+
+# Keep datasets and downloaded archives local
+data/
+*.zip
+
+# Keep generated test predictions local
+results/**/test_predictions.csv

@@ -1,0 +1,39 @@
+﻿# Python cache and temporary files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+tmp_trainer/
+wandb/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Ignore model directories except the final trained model
+models/*
+!models/spam_bert/
+
+# Exclude training checkpoints
+models/spam_bert/checkpoint-*/
+models/spam_bert/**/checkpoint-*/
+checkpoints/
+checkpoint-*/
+
+# Model weights: allow only the final model weights
+*.safetensors
+!models/spam_bert/*.safetensors
+*.pt
+*.pth
+*.bin
+!models/spam_bert/*.bin
+
+# Keep downloaded datasets local
+data/
+*.zip
+
+# Keep generated test predictions local
+results/**/test_predictions.csv

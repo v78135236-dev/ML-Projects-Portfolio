@@ -1,0 +1,37 @@
+﻿# Python cache and temporary files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Ignore model artifacts by default
+models/*
+!models/hate_speech_bert/
+models/hate_speech_bert/*
+!models/hate_speech_bert/config.json
+!models/hate_speech_bert/model.safetensors
+!models/hate_speech_bert/tokenizer.json
+!models/hate_speech_bert/tokenizer_config.json
+*.pt
+*.pth
+*.bin
+checkpoint-*/
+checkpoints/
+
+# Training outputs and temporary files
+tmp_trainer/
+wandb/
+
+# Keep datasets local
+data/
+*.zip
+
+# Keep generated test predictions local
+results/**/test_predictions.csv

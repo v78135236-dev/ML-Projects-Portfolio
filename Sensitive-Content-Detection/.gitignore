@@ -1,0 +1,41 @@
+﻿# Python cache and temporary files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Ignore model folders except the final sensitive-content model
+models/*
+!models/sensitive_bert/
+
+# Ignore training checkpoints
+models/sensitive_bert/checkpoint-*/
+models/sensitive_bert/**/checkpoint-*/
+checkpoints/
+checkpoint-*/
+
+# Ignore model weights globally, except the final saved model
+*.safetensors
+!models/sensitive_bert/*.safetensors
+*.pt
+*.pth
+*.bin
+!models/sensitive_bert/*.bin
+
+# Training outputs and temporary files
+tmp_trainer/
+wandb/
+
+# Dataset files remain local
+data/
+*.zip
+
+# Generated predictions remain local
+results/**/test_predictions.csv
